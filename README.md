@@ -42,7 +42,7 @@ In *Dimensionality Reduction by Learning an Invariant Mapping* by Hadsell, Chopr
  L_neg = Exp(-10*D)/D
 
  <p align="center">
- <img src="https://github.com/mfmotta//new_loss_computer_vision/blob/master/images/yukawa_cubic.png"  width=300">
+ <img src="https://github.com/mfmotta/new_loss_computer_vision/blob/master/images/yukawa_cubic.png"  width=300">
  </p>
 
 Notice that the proposed loss function is steeper for both positive and negative pairs distances and has a lower minimum. Let us see what results from these changes.
