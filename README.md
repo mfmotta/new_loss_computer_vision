@@ -31,7 +31,7 @@ In *Dimensionality Reduction by Learning an Invariant Mapping* by Hadsell, Chopr
  L_neg = m-D
  
  <p align="center">
- <img src="https://github.com/mfmotta/computer_vision_experiments_loss_functions/blob/master/contrastive_vs_yukawa/images/string_potential.png"  width=300">
+ <img src="https://github.com/mfmotta/new_loss_computer_vision/blob/master/images/string_potential.png"  width=300">
  </p>
  
 ### Yukawa vs.Contrastive Loss 
@@ -42,7 +42,7 @@ In *Dimensionality Reduction by Learning an Invariant Mapping* by Hadsell, Chopr
  L_neg = Exp(-10*D)/D
 
  <p align="center">
- <img src="https://github.com/mfmotta/computer_vision_experiments_loss_functions/blob/master/contrastive_vs_yukawa/images/yukawa_cubic.png"  width=300">
+ <img src="https://github.com/mfmotta//new_loss_computer_vision/blob/master/images/yukawa_cubic.png"  width=300">
  </p>
 
 Notice that the proposed loss function is steeper for both positive and negative pairs distances and has a lower minimum. Let us see what results from these changes.
@@ -59,7 +59,7 @@ The weights are initialized with the same values for training with each loss fun
 
 After 20 epochs we see that the Potential loss has slightly better performance on the test set, scoring 98.10% accuracy against 97.37% with the Contrastive loss. It is interesting to see the distances between the embedding vectors after training. Here we show the distributions of distances between positive and negative pairs on the test set:
 <p align="center">
-<img src="https://github.com/mfmotta/computer_vision_experiments_loss_functions/blob/master/contrastive_vs_yukawa/images/dist_positive_pairs_20epcs_128.png"  width="350"> <img src="https://github.com/mfmotta/computer_vision_experiments_loss_functions/blob/master/contrastive_vs_yukawa/images/dist_negative_pairs_20epcs_128.png"  width="350">
+<img src="https://github.com/mfmotta/new_loss_computer_vision/blob/master/images/dist_positive_pairs_20epcs_128.png"  width="350"> <img src="https://github.com/mfmotta/new_loss_computer_vision/blob/master/images/dist_negative_pairs_20epcs_128.png"  width="350">
   </p>
 We can see that the Contrastive loss does a better job at clustering the positive pairs together, with mean distance = 0.030 and standard deviation = 0.046, whereas the Potential loss has mean dist=0.052 and std=0,058. For negative pairs, the Potential loss is able to better cluster negative pairs together, with mean dist = 0.795, std=0.104, while these values for the Contrastive loss are mean dist= 1.171 and std=0.199.
 
@@ -69,38 +69,38 @@ We can also visualize the t-SNE projections of the test set
 
 Pre training:
 <p align="center">
- <img src="https://github.com/mfmotta/new_loss_computer_vision/images/t_SNE_pre-training.png"  width="500">
+ <img src="https://github.com/mfmotta/new_loss_computer_vision/blob/master/images/t_SNE_pre-training.png"  width="500">
  </p>
   
  After training with the Contrastive loss:
  
  <p align="center">
- <img src="https://github.com/mfmotta/new_loss_computer_vision/images/t_SNE_20epcs_128_contrastive.png"  width="500">
+ <img src="https://github.com/mfmotta/new_loss_computer_vision/blob/master/images/t_SNE_20epcs_128_contrastive.png"  width="500">
  </p>
  
   After training with the Yukawa (potential) loss:
  
   <p align="center">
- <img src="https://github.com/mfmotta/new_loss_computer_vision/images/t_SNE_20epcs_128_potential.png"  width="500">
+ <img src="https://github.com/mfmotta/new_loss_computer_vision/blob/master/images/t_SNE_20epcs_128_potential.png"  width="500">
  </p>
 
 ### 40 epochs - batch size = 128
 
 <p align="center">
-<img src="https://github.com/mfmotta/new_loss_computer_vision/images/dist_positive_40epcs_128.png"  width="350"> <img src="https://github.com/mfmotta/computer_vision_experiments_loss_functions/blob/master/contrastive_vs_yukawa/images/dist_negative_40epcs_128.png"  width="350">
+<img src="https://github.com/mfmotta/new_loss_computer_vision/blob/master/images/dist_positive_40epcs_128.png"  width="350"> <img src="https://github.com/mfmotta/new_loss_computer_vision/blob/master/images/dist_negative_40epcs_128.png"  width="350">
   </p>
 
 
  Contrastive loss:
  
  <p align="center">
- <img src="https://github.com/mfmotta/computer_vision_experiments_loss_functions/blob/master/contrastive_vs_yukawa/images/tSNE__40epcs_128contrastive.png"  width="500">
+ <img src="https://github.com/mfmotta/new_loss_computer_vision/blob/master/images/tSNE__40epcs_128contrastive.png"  width="500">
  </p>
  
  Yukawa loss:
  
   <p align="center">
- <img src="https://github.com/mfmotta/computer_vision_experiments_loss_functions/blob/master/contrastive_vs_yukawa/images/tSNE__40epcs_128potential.png"  width="500">
+ <img src="https://github.com/mfmotta/new_loss_computer_vision/blob/master/images/tSNE__40epcs_128potential.png"  width="500">
  </p>
  
  
